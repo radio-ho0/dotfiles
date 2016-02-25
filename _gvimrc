@@ -1,0 +1,12 @@
+" File: .gvimrc.vim
+" Desption:
+" Author: 
+" Last Change: 2015/02/15
+
+if exists('loaded_.gvimrc')
+    finish
+endif
+
+colors dante
+set go=
+
