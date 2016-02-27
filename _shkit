@@ -18,6 +18,7 @@ alias cd...="cd ../.."
 alias backli="sudo tee /sys/class/backlight/acpi_video0/brightness <<< 4"
 alias close_screen="sleep 1 && xset dpms force off"
 alias nettime="ntpdate pool.ntp.org"
+alias download_site="wget --mirror -p --html-extension --convert-links  -U Mozilla/5.0 -e robots=off -np"
 xfind(){
     find  . -iname "*$1*"
 }
