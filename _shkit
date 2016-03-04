@@ -102,3 +102,15 @@ alias busy="cat /dev/urandom | hexdump -C | grep \"ca fe\""
 alias V="gvim"
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib:/usr/lib64
+
+
+selecttable () {
+        if [ $# -lt 2 ]
+        then
+                echo " usage :: $(basename $0) \x1b[31mfile_name \x1b[32mtable_name \x1b[0m" >&2
+        else
+                sqlite3 $1 "select * from $2"
+        fi
+}
+
+
